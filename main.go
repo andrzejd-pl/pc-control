@@ -34,10 +34,11 @@ func action(logger *log.Logger) {
 
 func pcSwitchPush(w http.ResponseWriter, r *http.Request) {
 	if r.Method != http.MethodPost {
-		w.WriteHeader(404)
+		w.WriteHeader(http.StatusNotFound)
 		return
 	}
 
-	log := log.New(w, logPrefix, logFlag)
-	action(log)
+	logger := log.New(w, logPrefix, logFlag)
+	action(logger)
+	w.WriteHeader(http.StatusOK)
 }
