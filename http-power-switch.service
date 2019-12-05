@@ -1,0 +1,13 @@
+# Contents of /etc/systemd/system/http-power-switch.service
+[Unit]
+Description=Http Power Switch Service
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+ExecStart=/home/pi/go/bin/pc-control
+User=root
+
+[Install]
+WantedBy=multi-user.target
