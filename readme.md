@@ -1,11 +1,11 @@
-#PC-CONTROL
+# PC-CONTROL
 
 Http service enable to turning on/off PC by GPIO.
 
-**Platform**: Raspberry PI B+
-**Interface**: GPIO
-**GPIO port**: 17
-**HTTP port**
+**Platform**: Raspberry PI B+  
+**Interface**: GPIO  
+**GPIO port**: 17  
+**HTTP port**: 80
 
 ## Install
 ```sh
@@ -25,3 +25,4 @@ cp ~/$GOPATH/github.com/andrzejd-pl/pc-control/http-power-switch.service /etc/sy
 
 - custom configuration
 - dockerize
+- auto shutdown
